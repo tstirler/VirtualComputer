@@ -21,6 +21,18 @@ namespace VirtualComputer
             }
         }
 
+        private enum Opcodes
+        {
+            NOP,
+            ADD,
+            SUB,
+            LOAD,
+            SAVE,
+            JMP,
+            RST,
+            HALT=255
+        }
+
         private Register addressRegister;
         private Memory onBoardMemory;
         private int OnBoardMemoryInKiloByte = 4;

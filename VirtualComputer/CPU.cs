@@ -29,20 +29,25 @@ namespace VirtualComputer
             LOAD,
             SAVE,
             JMP,
+            JZ,
+            JE,
+            JNE,
+            JG,
+            JGE,
+            JL,
+            JLE,
             RST,
             HALT=255
         }
 
         private Register addressRegister;
         private Memory onBoardMemory;
-        private int OnBoardMemoryInKiloByte = 4;
-
-
+        private int onBoardMemoryInKiloByte = 4;
+        
         public bool Ready { get; private set; }
         public bool Halt { get; private set; }
         public bool OperationOverflow { get; private set; }
         public bool OperationUnderflow { get; private set; }
-
 
         public CPU()
         {
@@ -51,11 +56,53 @@ namespace VirtualComputer
             registerC = new Register(VirtualMachine.DataBus.BusWidthInBits * 2);
             registerE = new Register(VirtualMachine.DataBus.BusWidthInBits * 2);
             addressRegister = new Register(VirtualMachine.AdressBus.BusWidthInBits);
-            onBoardMemory = new Memory(OnBoardMemoryInKiloByte);
+            onBoardMemory = new Memory(onBoardMemoryInKiloByte);
         }
 
         public void Update()
         {
         }
+
+        #region OP-codes
+        public void DoNop()
+        {
+
+        }
+
+        public void DoAdd()
+        {
+        }
+
+        public void DoSub()
+        {
+
+        }
+
+        public void DoLoad()
+        {
+
+        }
+
+        public void DoSave()
+        {
+
+        }
+
+        public void DoJump()
+        {
+
+        }
+
+        public void DoReset()
+        {
+
+        }
+
+        public void DoHalt()
+        {
+
+        }
+
+        #endregion
     }
 }

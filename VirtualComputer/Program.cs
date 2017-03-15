@@ -11,7 +11,7 @@ namespace VirtualComputer
         static void Main(string[] args)
         {
             int DataBusWidthInBits = 8;
-            int AdressBusWidthInBits = 8;
+            int AdressBusWidthInBits = 16;
 
             VirtualMachine machine = new VirtualMachine(DataBusWidthInBits, AdressBusWidthInBits);
             do
